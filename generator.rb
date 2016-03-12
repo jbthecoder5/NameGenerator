@@ -13,16 +13,24 @@ class Generator
 			6.times do |str|
 				str = @alph[rand(0..25)]
 				@letter += str
-
 			end
-
-			puts "#{@letter}"
+		else
+			return false
 		end
 	end
 
-	def capGen
+	def autoGen
 
+		return @letter
 	end
 
+	# return the auto-generated string in capital letters
+	def capGen
+		@letter.capitalize!
+	end
 
+	# return the auto-generated string in lowercase
+	def lowGen
+		@letter.lowercase!
+	end
 end
